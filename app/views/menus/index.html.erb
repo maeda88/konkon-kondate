@@ -1,1 +1,23 @@
 <%= render "shared/header" %>
+
+<div class='form' >
+  <div class='lavel' >日付を選択</div>
+  <div  class='date-select' >date</div>
+  <div  class='lavel' >予定を入力</div>
+  <div class='text-input' >plan</div>
+  <div>保存</div>
+</div>
+<div class='calendar'>
+  <% 7.times do |day| %>
+    <div class='item'>
+      <div class='date'>
+        5/5(日)
+      </div>
+      <ul class='content'>
+        <li class='plan-list'>・料理1</li>
+        <li class='plan-list'>・料理2</li>
+        <li class='plan-list'>・料理3</li>
+      </ul>
+    </div>
+  <% end %>
+</div>
