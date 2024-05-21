@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffd900;
+}
+
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
