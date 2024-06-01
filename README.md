@@ -53,6 +53,7 @@ konkon-kondate
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
 | date   | string     |                                |
 | dish1  | references | null: false, foreign_key: true |
 | dish2  | references | null: false, foreign_key: true |
@@ -65,11 +66,12 @@ konkon-kondate
 
 ## dishes テーブル
 
-| Column      | Type    | Options                        |
-| ----------- | ------- | ------------------------------ |
-| dish        | string  | null: false                    |
-| category_id | integer | null: false, foreign_key: true |
-| remark      | text    |                                |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| user        | references | null: false, foreign_key: true |
+| dish        | string     | null: false                    |
+| category_id | integer    | null: false, foreign_key: true |
+| remark      | text       |                                |
 
 ### Association
 
