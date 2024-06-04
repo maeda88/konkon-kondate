@@ -1,0 +1,12 @@
+
+<%= form_with model: @dish, url:dishes_path, local: true do |f| %>
+  <div class="dish-box">
+    <h3>新規　料理名登録</h3>
+    <div>カテゴリー
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
+    </div>
+    <%= f.text_field :dish, class:"title", placeholder:"料理名" %>
+    <%= f.text_area :remark, class:"text", placeholder:"メモ" %>
+    <%= f.submit "登録する" ,class:"btn" %>
+  </div>
+<% end %>
