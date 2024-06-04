@@ -1,0 +1,16 @@
+<h3>記事一覧</h3>
+<%= link_to "投稿する", new_dish_path, class:"post" %>
+
+<% @dishes.each do |dish| %>
+  <div class="dish">
+    <div class="dish-category">
+      <%= dish.category.name %>
+    </div>
+    <div class="dish-name">
+      <%= dish.dish %>
+    </div>
+    <div class="dish-text">
+      <%= dish.remark %>
+    </div>
+  </div>
+<% end %>
