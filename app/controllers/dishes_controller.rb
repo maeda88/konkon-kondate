@@ -8,8 +8,12 @@ class DishesController < ApplicationController
   end
 
   def create
-    Dish.create(dish_params)
-    redirect_to '/dishes'
+    @dish = Dish.new(dish_params)
+    if @dish.save
+      redirect_to dishes_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
