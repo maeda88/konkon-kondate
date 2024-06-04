@@ -1,6 +1,11 @@
 class DishesController < ApplicationController
   def index
-    @dishes = Dish.all
+    @user = current_user
+    @cat2 = Dish.where(user_id: @user.id, category_id: 2)
+    @cat3 = Dish.where(user_id: @user.id, category_id: 3)
+    @cat4 = Dish.where(user_id: @user.id, category_id: 4)
+    @cat5 = Dish.where(user_id: @user.id, category_id: 5)
+    @cat6 = Dish.where(user_id: @user.id, category_id: 6)
   end
   
   def new
