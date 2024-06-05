@@ -6,6 +6,7 @@ class DishesController < ApplicationController
     @cat4 = Dish.where(user_id: @user.id, category_id: 4)
     @cat5 = Dish.where(user_id: @user.id, category_id: 5)
     @cat6 = Dish.where(user_id: @user.id, category_id: 6)
+    @cat7 = Dish.where(user_id: @user.id, category_id: 7)
   end
   
   def new
