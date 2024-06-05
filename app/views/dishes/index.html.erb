@@ -1,16 +1,13 @@
-<h3>記事一覧</h3>
-<%= link_to "投稿する", new_dish_path, class:"post" %>
+<h3>登録済み　料理名一覧</h3>
+<%= link_to "新規登録する", new_dish_path, class:"post" %>
 
-<% @dishes.each do |dish| %>
-  <div class="dish">
-    <div class="dish-category">
-      <%= dish.category.name %>
-    </div>
-    <div class="dish-name">
-      <%= dish.dish %>
-    </div>
-    <div class="dish-text">
-      <%= dish.remark %>
-    </div>
-  </div>
-<% end %>
+<div class="contents">
+  <div class="cat_content">炒め・焼き</div>
+    <% @cat2.each do |dish| %>
+      <ul class="dish">
+        <li class="dish-name">
+          <%= dish.dish %>
+        </li>
+      </ul>
+  <% end %>
+</div>
