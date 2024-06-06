@@ -11,5 +11,6 @@
     <%= f.text_field :dish, class:"title", placeholder:"料理名" %>
     <%= f.text_area :remark, class:"text", placeholder:"メモ" %>
     <%= f.submit "登録する" ,class:"btn" %>
+    <%=link_to '戻る', dishes_path, class:"back-btn" %>
   </div>
 <% end %>
