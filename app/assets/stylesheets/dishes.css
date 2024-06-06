@@ -98,17 +98,20 @@ h3{
   border: 1px solid rgb(0, 0, 0);
   background-color: orange;
   color: white;
+  margin-bottom: 20px;
 }
 
-.dish-destroy {
+.dish-destroy,
+.back-btn{
   display: block;
   width: 150px;
   padding: 10px;
   border: 1px solid black;
-  background-color: #da6c4e;
+  background-color: gray;
   color: white;
   text-decoration: none;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 20px;
 }
+
