@@ -1,0 +1,14 @@
+<%= form_with model: @dish, local: true do |f| %>
+  <div class="dish-box">
+    <h3>登録済み　料理　編集</h3>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <div>カテゴリー
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
+    </div>
+    <%= f.text_field :dish, class:"title", placeholder:"料理名" %>
+    <%= f.text_area :remark, class:"text", placeholder:"メモ" %>
+    <%= f.submit "変更する" ,class:"btn" %>
+  </div>
+<% end %>
