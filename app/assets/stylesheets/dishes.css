@@ -17,20 +17,17 @@ h3{
 }
 
 .contents{
-  display: flex;
-  /* justify-content: center; */
-
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .content{
-  height: 300px;
-  width: 300px;
+  width: 100%;
   border-radius: 30px;
   border: 2px solid black;
-  margin: 50px;
-  padding: 10px;
   -ms-overflow-style: none;
-    scrollbar-width: none;
+  scrollbar-width: none;
 }
 
 .text_box{
