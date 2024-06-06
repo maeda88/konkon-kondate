@@ -96,3 +96,16 @@ h3{
   background-color: orange;
   color: white;
 }
+
+.dish-destroy {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: #da6c4e;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}

@@ -3,7 +3,8 @@
     <h3>登録済み　料理　編集</h3>
 
     <%= render 'shared/error_messages', model: f.object %>
-
+    <%= link_to "削除", dish_path(@dish.id), data: {turbo_method: :delete}, class:"dish-destroy" %>
+    
     <div>カテゴリー
       <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
     </div>
