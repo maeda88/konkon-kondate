@@ -54,10 +54,10 @@ konkon-kondate
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
 | user   | references | null: false, foreign_key: true |
-| date   | string     |                                |
-| dish1  | references | null: false, foreign_key: true |
-| dish2  | references | null: false, foreign_key: true |
-| dish3  | references | null: false, foreign_key: true |
+| date   | string     | null: false                    |
+| dish1  | string     |                                |
+| dish2  | string     |                                |
+| dish3  | string     |                                |
 
 ### Association
 
