@@ -10,7 +10,7 @@ class DishesController < ApplicationController
     @cat6 = Dish.where(user_id: @user.id, category_id: 6)
     @cat7 = Dish.where(user_id: @user.id, category_id: 7)
   end
-  
+
   def new
     @dish = Dish.new
   end
@@ -42,6 +42,7 @@ class DishesController < ApplicationController
   end
 
   private
+
   def dish_params
     params.require(:dish).permit(:dish, :category_id, :remark).merge(user_id: current_user.id)
   end
