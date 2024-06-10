@@ -1,0 +1,53 @@
+<h3>登録済み　料理名一覧</h3>
+<%= link_to "新規登録する", new_dish_path, class:"post" %>
+
+<div class="contents">
+  <div class="content cat2">
+    <div class="text_box">
+      <div class="cat_title">炒め・焼き</div>
+      <% @cat2.each do |dish| %>
+        <%= render partial: "dishes_name", locals: { dish: dish } %>
+      <% end %>
+    </div>
+  </div>
+  <div class="content cat3">
+    <div class="text_box">
+      <div class="cat_title">煮物</div>
+      <% @cat3.each do |dish| %>
+        <%= render partial: "dishes_name", locals: { dish: dish } %>
+      <% end %>
+    </div>
+  </div>
+  <div class="content cat4">
+    <div class="text_box">
+      <div class="cat_title">蒸す・ゆでる</div>
+      <% @cat4.each do |dish| %>
+        <%= render partial: "dishes_name", locals: { dish: dish } %>
+      <% end %>
+    </div>
+  </div>
+  <div class="content cat5">
+    <div class="text_box">
+      <div class="cat_title">揚げ物</div>
+      <% @cat5.each do |dish| %>
+        <%= render partial: "dishes_name", locals: { dish: dish } %>
+      <% end %>
+    </div>
+  </div>
+  <div class="content cat6">
+    <div class="text_box">
+      <div class="cat_title">生</div>
+      <% @cat6.each do |dish| %>
+        <%= render partial: "dishes_name", locals: { dish: dish } %>
+      <% end %>
+    </div>
+  </div>
+  <div class="content cat7">
+    <div class="text_box">
+      <div class="cat_title">その他</div>
+      <% @cat7.each do |dish| %>
+        <%= render partial: "dishes_name", locals: { dish: dish } %>
+      <% end %>
+    </div>
+  </div>
+</div>
