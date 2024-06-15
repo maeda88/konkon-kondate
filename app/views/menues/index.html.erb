@@ -1,22 +1,25 @@
 <%= render "shared/header" %>
 
-<div class='form' >
-  <div class='lavel' >日付を選択</div>
-  <div  class='date-select' >date</div>
-  <div  class='lavel' >予定を入力</div>
-  <div class='text-input' >plan</div>
-  <div>保存</div>
-</div>
+<%= form_with model: @menu, url: menues_path, class: 'form' do |f| %>
+  <%= f.label :日付を選択, class: 'lavel' %>
+  <%= f.date_field :date, class: 'date-select' %>
+  <%= f.label :予定を入力, class: 'lavel' %>
+  <%= f.text_field :plan, class: 'text-input' %>
+  <%= f.submit '保存' %>
+<% end %>
 <div class='calendar'>
-  <% 7.times do |day| %>
+  <% @week_days.each do |day| %>
     <div class='item'>
       <div class='date'>
-        5/5(日)
+        <%= day[:month] %>/<%= day[:date] %><%= day[:wdays]%>
       </div>
       <ul class='content'>
-        <li class='plan-list'>・料理1</li>
-        <li class='plan-list'>・料理2</li>
-        <li class='plan-list'>・料理3</li>
+
+        <% if day[:menues].length != 0 %>
+          <% day[:menues].each do |menu| %>
+            <li class='plan-list'>・<%= menu %></li>
+          <% end %>
+        <% end %>
       </ul>
     </div>
   <% end %>
