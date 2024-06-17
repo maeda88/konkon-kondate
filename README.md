@@ -13,7 +13,13 @@ konkon-kondate
 - 何も見ずに作れる作れる料理はたくさんあるが、パッと思い出せない
 
 # URL
+https://konkon-kondate.onrender.com
+
 # テスト用アカウント
+- Basic認証ID : admin
+- Basic認証パスワード : 5555
+- メールアドレス : aaa@aaa
+- パスワード : 111111
 
 # 利用方法
 - 料理名をカテゴリー毎に登録する
