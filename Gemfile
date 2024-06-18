@@ -83,3 +83,4 @@ end
 gem 'devise'
 gem 'pry-rails'
 gem 'active_hash'
+gem 'simple_calendar', '~> 3.0.4'
