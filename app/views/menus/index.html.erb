@@ -1,12 +1,32 @@
 <%= render "shared/header" %>
 <p id="notice"><%= notice %></p>
 
+<%= form_with(model: @menu, local: true) do |form| %>
+
+  <div class="time">
+    <div class="form-tag">日付</div>
+    <%= form.date_select :start_day %>
+  </div>
+
+  <select>
+    <option value="">登録する料理を選んでください</option>
+    <% Dish.all.each do |dish| %>
+      <option><%= dish.dish %></option>
+    <% end %>
+  </select>
+
+
+ <div class="submit">
+    <%= form.submit %>
+ </div>
+<% end %>
+
 <%= month_calendar events: @menus do |date, menus| %>
   <%= date.day %>
 
   <% menus.each do |menu| %>
     <div>
-      <%= link_to menu.title, menu %>
+      <%= link_to menu.title, menu %>  <%# menu.titleを変更する %>
     </div>
   <% end %>
 <% end %>
