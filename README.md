@@ -117,17 +117,18 @@ https://konkon-kondate.onrender.com
 - タスク管理　GitHub
 
 # ローカルでの動作方法
-以下のコマンドを順に実行。
-% git clone https://github.com/maeda88/konkon-kondate.git
-% cd konkon-kondate
-% bundle install
-% yarn install
+以下のコマンドを順に実行。  
+% git clone https://github.com/maeda88/konkon-kondate.git  
+% cd konkon-kondate  
+% bundle install  
+% rails db:create  
+% rails db:migrate  
+% rails s  
 
 # 工夫したポイント
 - 登録済み料理一覧をプルダウンで選択、いちいち料理名を打ち込まなくても短時間で登録できる
 - 登録済み料理一覧にメモ機能を実装、レシピのURLやコツ等を登録・蓄積できる
 
 # 改善点
-- デザインがダサい
 
 # 制作時間
