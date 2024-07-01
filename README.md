@@ -32,10 +32,19 @@ https://konkon-kondate.onrender.com
 このような問題を解決するために、食事の献立を事前に記録し、夕方になっても迷わずにすぐにメニューを決められるようなアプリケーションを作成した。
 
 # 実装した機能について画像やGIFおよびその説明
-- 1週間のこんだて登録画面
-[![Image from Gyazo](https://i.gyazo.com/e719ea82f0ec9107864e36cf41b53e9e.png)](https://gyazo.com/e719ea82f0ec9107864e36cf41b53e9e)
+- 料理名登録機能
+　Topページ → 登録済み料理一覧 → 新規登録する
+　定番料理、作ったことのある料理を登録する。
+[![Image from Gyazo](https://i.gyazo.com/c096723c09068516ec3ab56aef09075d.png)](https://gyazo.com/c096723c09068516ec3ab56aef09075d)
 
 # 実装予定の機能
+- こんだて登録機能
+　1日3品まで登録できる。
+　カレンダーから（最近作った物を見ながらかぶらないように）、登録済み料理一覧から（作れる料理を見ながら）のどちらからも登録できるようにする。
+[![Image from Gyazo](https://i.gyazo.com/11b64f49a171fcf69235feae9f46c61c.png)](https://gyazo.com/11b64f49a171fcf69235feae9f46c61c)
+
+- こんだて登録の際、カテゴリー別に料理名が表示される（2段階プルダウン）
+- こんだて登録後、料理名表示がカテゴリー毎に色分けされて表示（マンネリ化回避）
 
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/c6c36b492f49f71879a7c6d8e8a4fa8f.png)](https://gyazo.com/c6c36b492f49f71879a7c6d8e8a4fa8f)
@@ -100,7 +109,25 @@ https://konkon-kondate.onrender.com
 [![Image from Gyazo](https://i.gyazo.com/e4c4b4f9c297b95097a860393aa327fe.png)](https://gyazo.com/e4c4b4f9c297b95097a860393aa327fe)
 
 # 開発環境
+- フロントエンド　HTML, CSS
+- バックエンド　Ruby on Rails 7.0.0, mySQL, PostgreSQL
+- インフラ　Render
+- テスト　rspec
+- テキストエディタ　VSCode
+- タスク管理　GitHub
+
 # ローカルでの動作方法
+以下のコマンドを順に実行。
+% git clone https://github.com/maeda88/konkon-kondate.git
+% cd konkon-kondate
+% bundle install
+% yarn install
+
 # 工夫したポイント
+- 登録済み料理一覧をプルダウンで選択、いちいち料理名を打ち込まなくても短時間で登録できる
+- 登録済み料理一覧にメモ機能を実装、レシピのURLやコツ等を登録・蓄積できる
+
 # 改善点
+- デザインがダサい
+
 # 制作時間
