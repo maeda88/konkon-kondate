@@ -8,10 +8,24 @@
     <%= form.date_select :start_day %>
   </div>
 
+<%= form.collection_select :dish_id, Dish.all, :id, :dish, include_blank: "選択して下さい" %>
+
   <select>
     <option value="">登録する料理を選んでください</option>
     <% Dish.all.each do |dish| %>
-      <option><%= dish.dish %></option>
+      <option value=<%= dish.id %>><%= dish.dish %></option>
+    <% end %>
+  </select>
+  <select>
+    <option value="">登録する料理を選んでください</option>
+    <% Dish.all.each do |dish| %>
+      <option value=<%= dish.id %>><%= dish.dish %></option>
+    <% end %>
+  </select>
+  <select>
+    <option value="">登録する料理を選んでください</option>
+    <% Dish.all.each do |dish| %>
+      <option value=<%= dish.id %>><%= dish.dish %></option>
     <% end %>
   </select>
 
