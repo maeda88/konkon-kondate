@@ -9,18 +9,17 @@ class MenusController < ApplicationController
   end
 
   def create
-    binding.pry
-    @menu = Menu.create(menu_params)
-    # if @menu.save
+    @menu = Menu.new(menu_params)
+    if @menu.save
       redirect_to root_path
-    # else
-      # render :new, status: :unprocessable_entity
-    # end
+    else
+      render :index, status: :unprocessable_entity
+    end
   end
   
   private
 
   def menu_params
-    params.require(:menu).permit(:start_day).merge()
+    params.require(:menu).permit(:start_day, dish_ids: []).merge(user_id: current_user.id)
   end
 end
