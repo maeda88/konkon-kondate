@@ -20,6 +20,6 @@ class MenusController < ApplicationController
   private
 
   def menu_params
-    params.require(:menu).permit(:start_day, dish_ids: []).merge(user_id: current_user.id)
+    params.require(:menu).permit(:start_time, dish_ids: []).merge(user_id: current_user.id)
   end
 end

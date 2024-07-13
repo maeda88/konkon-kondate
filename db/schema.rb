@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_25_061100) do
 
   create_table "menus", charset: "utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.date "start_day"
+    t.datetime "start_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_menus_on_user_id"
