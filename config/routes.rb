@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'dishes/new'
   root to: "menus#index"
   resources :dishes
+  resources :menus
 end

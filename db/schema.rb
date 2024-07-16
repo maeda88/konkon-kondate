@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_01_210313) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_25_061100) do
   create_table "dishes", charset: "utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "dish", null: false
@@ -19,6 +19,23 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_01_210313) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_dishes_on_user_id"
+  end
+
+  create_table "menu_dishes", charset: "utf8", force: :cascade do |t|
+    t.bigint "menu_id", null: false
+    t.bigint "dish_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dish_id"], name: "index_menu_dishes_on_dish_id"
+    t.index ["menu_id"], name: "index_menu_dishes_on_menu_id"
+  end
+
+  create_table "menus", charset: "utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "start_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_menus_on_user_id"
   end
 
   create_table "users", charset: "utf8", force: :cascade do |t|
@@ -35,4 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_01_210313) do
   end
 
   add_foreign_key "dishes", "users"
+  add_foreign_key "menu_dishes", "dishes"
+  add_foreign_key "menu_dishes", "menus"
+  add_foreign_key "menus", "users"
 end
